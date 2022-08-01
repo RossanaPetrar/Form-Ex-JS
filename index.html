@@ -20,26 +20,23 @@
       <!-- Form fields -->
       <form action="submit" class="form-container mt-4">
         <label for="Nume" class="mt-2">Nume*</label>
-        <input class="form-control mt-2" type="text" id="Nume" aria-label="Nume" required />
+        <input class="form-control mt-2" type="text" id="Nume" aria-label="Nume" pattern="^[A-Z][A-Za-z]$+" title="Numele trebuie sa inceapa cu litera mare." required />
         <label for="Prenume" class="mt-2">Prenume*</label>
-        <input class="form-control mt-2" type="text" id="Prenume" aria-label="Prenume" required />
+        <input class="form-control mt-2" type="text" id="Prenume" aria-label="Prenume" pattern="^[A-Z][A-Za-z]$+" title="Prenumele trebuie sa inceapa cu litera mare." required />
         <label for="Adresa" class="mt-2">Adresa</label>
         <input class="form-control mt-2" type="text" id="Adresa" aria-label="Adresa" />
 
         <!-- Judet si Localitate Dropdowns -->
         <label for="Judet" class="mt-2">Judet</label>
-        <select class="form-select mt-2" id="Judet">
+        <select class="form-select mt-2" id="judet">
           <option selected>-</option>
-          <option value="1">Cluj</option>
-          <option value="2">Bihor</option>
+          <option value="Cluj" class="judet">Cluj</option>
+          <option value="Bihor" class="judet">Bihor</option>
         </select>
 
         <label for="Localitate" class="mt-2">Localitate</label>
-        <select class="form-select mt-2" id="Localitate">
+        <select class="form-select mt-2" id="localitate">
           <option selected>-</option>
-          <option value="1">Cluj-Napoca</option>
-          <option value="2">Turda</option>
-          <option value="3">Huedin</option>
         </select>
 
         <div class="mt-2">
