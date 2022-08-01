@@ -44,12 +44,20 @@
 
         <div class="mt-2">
           <label for="Email" class="form-label">Adresa de email*</label>
-          <input type="email" class="form-control" id="Email" aria-describedby="email" required />
+          <input type="email" class="form-control" id="Email" required />
         </div>
         <div class="mt-2">
           <label for="Parola" class="form-label">Parola*</label>
-          <input type="password" class="form-control" aria-describedby="passwordHelp" id="Parola" required />
-          <div id="passwordHelp" class="form-text">Parola trebuie sa contina litere mici, litere mari, numere si caractere speciale (@#_+).</div>
+          <input
+            type="password"
+            class="form-control"
+            aria-describedby="passwordHelp"
+            id="parola"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#_+]).{8,}"
+            title="Parola trebuie sa aiba cel putin 8 caractere si sa contina litere mici, litere mari, numere si caractere speciale (@#_+)."
+            required
+          />
+          <div id="passwordHelp" class="form-text">Parola trebuie sa fie de cel putin 8 caractere si sa contina litere mici, litere mari, numere si caractere speciale (@#_+).</div>
         </div>
 
         <label for="Numar de telefon" class="mt-2">Numar de telefon</label>
@@ -60,7 +68,7 @@
           <input class="form-control" type="file" id="pozaBuletin" />
         </div>
 
-        <button type="submit" class="btn btn-primary my-3">Submit</button>
+        <button type="submit" class="btn btn-primary my-3" id="submitButton">Submit</button>
       </form>
     </main>
 
