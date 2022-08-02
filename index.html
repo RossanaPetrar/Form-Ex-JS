@@ -11,6 +11,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="container d-flex flex-column justify-content-center align-items-center my-5">
@@ -28,7 +29,7 @@
 
         <!-- Judet si Localitate Dropdowns -->
         <label for="Judet" class="mt-2">Judet</label>
-        <select class="form-select mt-2" id="judet">
+        <select class="form-select mt-2 judet-container" id="judet">
           <option selected>-</option>
           <option value="Cluj" class="judet">Cluj</option>
           <option value="Bihor" class="judet">Bihor</option>
@@ -62,7 +63,7 @@
 
         <div class="mt-2">
           <label for="pozaBuletin" class="form-label">Poza de buletin</label>
-          <input class="form-control" type="file" id="pozaBuletin" />
+          <input class="form-control" type="file" id="pozaBuletin" accept="image/png, image/jpeg" />
         </div>
 
         <button type="submit" class="btn btn-primary my-3" id="submitButton">Submit</button>
@@ -74,5 +75,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script src="app.js"></script>
   </body>
 </html>
