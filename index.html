@@ -19,30 +19,47 @@
       <h5>Va rog completati formularul de mai jos</h5>
 
       <!-- Form fields -->
+
       <form action="submit" class="form-container mt-4">
-        <label for="Nume" class="mt-2">Nume*</label>
-        <input class="form-control mt-2" type="text" id="Nume" aria-label="Nume" pattern="^[A-Z][A-Za-z]$+" title="Numele trebuie sa inceapa cu litera mare." required />
-        <label for="Prenume" class="mt-2">Prenume*</label>
-        <input class="form-control mt-2" type="text" id="Prenume" aria-label="Prenume" pattern="^[A-Z][A-Za-z]$+" title="Prenumele trebuie sa inceapa cu litera mare." required />
-        <label for="Adresa" class="mt-2">Adresa</label>
-        <input class="form-control mt-2" type="text" id="Adresa" aria-label="Adresa" />
+        <div class="mt-2">
+          <label for="Nume" class="form-label">Nume*</label>
+          <input type="text" class="form-control" id="nume" name="nume" pattern="^[A-Z][a-z]+$" title="Numele trebuie sa inceapa cu litera mare." required />
+        </div>
+
+        <div class="mt-2">
+          <label for="Prenume" class="form-label">Prenume*</label>
+          <input type="text" class="form-control mt-2" id="prenume" name="prenume" pattern="^[A-Z][a-z]+$" title="Prenumele trebuie sa inceapa cu litera mare." required />
+        </div>
+
+        <div class="mt-2">
+          <label for="Adresa" class="form-label">Adresa</label>
+          <input class="form-control mt-2" type="text" id="adresa" name="adresa" aria-label="Adresa" />
+        </div>
 
         <!-- Judet si Localitate Dropdowns -->
         <label for="Judet" class="mt-2">Judet</label>
         <select class="form-select mt-2 judet-container" id="judet">
-          <option selected>-</option>
-          <option value="Cluj" class="judet">Cluj</option>
-          <option value="Bihor" class="judet">Bihor</option>
+          <option selected value="-" name="judet">-</option>
+          <option value="Cluj" class="judet" name="judet">Cluj</option>
+          <option value="Bihor" class="judet" name="judet">Bihor</option>
         </select>
 
         <label for="Localitate" class="mt-2">Localitate</label>
         <select class="form-select mt-2" id="localitate">
-          <option selected>-</option>
+          <option selected value="-" name="localitate">-</option>
         </select>
 
         <div class="mt-2">
           <label for="Email" class="form-label">Adresa de email*</label>
-          <input type="email" class="form-control" id="Email" required />
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            pattern="^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$"
+            title="Adresa de email invalida, va rugam introduceti o adresa de email valida (ex.: exemplu@gmail.com)."
+            required
+          />
         </div>
         <div class="mt-2">
           <label for="Parola" class="form-label">Parola*</label>
@@ -51,6 +68,7 @@
             class="form-control"
             aria-describedby="passwordHelp"
             id="parola"
+            name="parola"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#_+]).{8,}"
             title="Parola trebuie sa aiba cel putin 8 caractere si sa contina litere mici, litere mari, numere si caractere speciale (@#_+)."
             required
@@ -58,8 +76,18 @@
           <div id="passwordHelp" class="form-text">Parola trebuie sa fie de cel putin 8 caractere si sa contina litere mici, litere mari, numere si caractere speciale (@#_+).</div>
         </div>
 
-        <label for="Numar de telefon" class="mt-2">Numar de telefon</label>
-        <input class="form-control mt-2" type="text" id="Numar de telefon" aria-label="Numar de telefon" />
+        <label for="telefon" class="mt-2">Numar de telefon</label>
+        <input
+          class="form-control mt-2"
+          type="text"
+          id="telefon"
+          name="telefon"
+          pattern="\+40(\d){9}"
+          aria-label="Numar de telefon"
+          aria-describedby="numberHelp"
+          title="Numarul de telefon trebuie sa contina codul tarii (ex.: +40747893322) si exact 9 cifre dupa acesta."
+        />
+        <div id="numberHelp" class="form-text">Numarul de telefon trebuie sa contina codul tarii (ex.: +40747893322) si exact 9 cifre dupa acesta.</div>
 
         <div class="mt-2">
           <label for="pozaBuletin" class="form-label">Poza de buletin</label>
@@ -75,7 +103,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-
     <script src="app.js"></script>
   </body>
 </html>
