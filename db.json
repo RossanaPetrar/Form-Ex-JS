@@ -1,0 +1,15 @@
+{
+  "client": [
+    {
+      "nume": "Petrar",
+      "prenume": "Rossana",
+      "adresa": "str. Aurel Vlaicu 4",
+      "judet": "Cluj",
+      "localitate": "Cluj-Napoca",
+      "email": "rossana.petrar@gmail.com",
+      "parola": "hy58@#HTl5s",
+      "telefon": "+40728052321",
+      "id": 1
+    }
+  ]
+}

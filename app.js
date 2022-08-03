@@ -25,17 +25,54 @@ function onChange() {
 judetOption.onchange = onChange;
 onChange();
 
+// POST
+
+const addPost = document.querySelector(".add-post-form");
+const url = "http://localhost:3000/client";
+
+addPost.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("Form submited");
+  fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      nume: nume.value,
+      prenume: prenume.value,
+      adresa: adresa.value,
+      judet: judet.value,
+      localitate: localitate.value,
+      email: email.value,
+      parola: parola.value,
+      telefon: telefon.value,
+    }),
+  })
+    .then((response) => {
+      console.log(response.json());
+      return response.json();
+    })
+    .catch((err) => {
+      console.log("Error:", err);
+    });
+});
+
+const submitButton = document.querySelector("#submitButton");
+
+submitButton.addEventListener("click", () => {
+  window.open("result.html");
+});
+
 // Getting form values as JSON
 
-function handleSubmit(event) {
-  event.preventDefault();
+// function handleSubmit(event) {
+//   event.preventDefault();
 
-  const data = new FormData(event.target);
+//   const data = new FormData(event.target);
 
-  const value = Object.fromEntries(data.entries());
+//   const value = Object.fromEntries(data.entries());
 
-  console.log(JSON.stringify(value, null, 2));
-}
+//   console.log(JSON.stringify(value, null, 2));
+// }
 
-const form = document.querySelector("form");
-form.addEventListener("submit", handleSubmit);
+// const form = document.querySelector("form");
+// form.addEventListener("submit", handleSubmit);

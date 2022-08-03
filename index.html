@@ -20,7 +20,7 @@
 
       <!-- Form fields -->
 
-      <form action="submit" class="form-container mt-4">
+      <form class="form-container mt-4 add-post-form" form action="submit" method="post" target="_blank">
         <div class="mt-2">
           <label for="Nume" class="form-label">Nume*</label>
           <input type="text" class="form-control" id="nume" name="nume" pattern="^[A-Z][a-z]+$" title="Numele trebuie sa inceapa cu litera mare." required />
@@ -94,7 +94,7 @@
           <input class="form-control" type="file" id="pozaBuletin" accept="image/png, image/jpeg" />
         </div>
 
-        <button type="submit" class="btn btn-primary my-3" id="submitButton">Submit</button>
+        <button class="btn btn-primary my-3" id="submitButton">Submit</button>
       </form>
     </main>
 
