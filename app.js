@@ -61,18 +61,3 @@ const submitButton = document.querySelector("#submitButton");
 submitButton.addEventListener("click", () => {
   window.open("result.html");
 });
-
-// Getting form values as JSON
-
-// function handleSubmit(event) {
-//   event.preventDefault();
-
-//   const data = new FormData(event.target);
-
-//   const value = Object.fromEntries(data.entries());
-
-//   console.log(JSON.stringify(value, null, 2));
-// }
-
-// const form = document.querySelector("form");
-// form.addEventListener("submit", handleSubmit);

@@ -34,12 +34,3 @@ window.addEventListener("load", () => {
       });
     });
 });
-
-/* <p>Nume: <span>${client.nume}</span></p>
-<p>Prenume: <span>${client.prenume}</span></p>
-<p>Adresa: <span>${client.adresa}</span></p>
-<p>Judet: <span>${client.judet}</span></p>
-<p>Localitate: <span>${client.localitate}</span></p>
-<p>Adresa de email: <span>${client.email}</span></p>
-<p>Parola: <span>${client.parola}</span></p>
-<p>Numar de telefon: <span>${client.telefon}</span></p> */
